@@ -1,0 +1,33 @@
+{
+   "background": {
+      "scripts": [ "background/background.js" ]
+   },
+   "browser_action": {
+      "default_popup": "popup/popup.html",
+      "default_title": "Instascrapper"
+   },
+   "content_scripts": [ {
+      "js": [ "content.js" ],
+      "matches": [ "https://www.instagram.com/*" ],
+      "run_at": "document_end"
+   } ],
+   "description": "This extansion is created by Muzammil Hussain to scrap emails and followers from the instagram.",
+   "icons": {
+      "128": "icons/icon_128.png",
+      "48": "icons/icon_48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAydxqrLHxVZvv/akEZLtk6QIwPULFco3wS7A8tq5rv1+5jL4HtkhZeiqr/hHRfykUYLWZ7NsZ+OLmdvC5ehg82TzywBd0e4sIGa/fHUa2/jcycP5PViqFgpMLCjXhU+m3ro54eJOMWw+Nw9kR/LrP/YzFwjXOv8vuthGOFmv74FizDvS8EQd1T8++J4CUR0Nqd31P6zzFvtFIuxHLXwlAsM0P4X7f1Skd4xMVg0Vz4xcZgOJYVbvqbxSENJVrONpAcMDlxtJGKwNLA6JaIRjTbf/syHGbvS8oKMo1A3HGNzGtqiQUegjB+NLceoTfaTzl0a9jhKcV4+QVYqXsM46CiQIDAQAB",
+   "manifest_version": 2,
+   "name": "instagram scrapper by Muzammil Hussain",
+   "oauth2": {
+      "client_id": "947397396494-rheu77m1m0m77par2rm1vol4c9t664og.apps.googleusercontent.com",
+      "scopes": [ "https://www.googleapis.com/auth/userinfo.email" ]
+   },
+   "options_ui": {
+      "chrome_style": true,
+      "page": "options/options.html"
+   },
+   "permissions": [ "storage", "webRequestBlocking", "webRequest", "https://i.instagram.com/*", "https://www.instagram.com/*", "https://*.cdninstagram.com/*", "https://*.fbcdn.net/*", "identity", "https://mjeyz.com/" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.5.7"
+}
